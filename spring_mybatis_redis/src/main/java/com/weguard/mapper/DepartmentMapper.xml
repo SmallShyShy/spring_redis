@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.weguard.mapper.DepartmentMapper">
+    <resultMap id="department" type="com.weguard.entity.Department">
+        <id column="department_id" property="departmentId"></id>
+        <result column="department_name" property="departmentName"></result>
+    </resultMap>
+    <select id="findDepartmentById" resultMap="department">
+        select * from t_department where department_id=#{departmentId}
+    </select>
+</mapper>
