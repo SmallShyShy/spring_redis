@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+        <!-- 打印sql日志 -->
+	<settings>
+         <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>  
+	<!-- 实体类,简称 -设置别名 -->
+	<typeAliases>
+		<typeAlias alias="Company" type="com.weguard.model.Company" />
+		<typeAlias alias="PropertyCompany" type="com.weguard.model.PropertyCompany" />
+		<typeAlias alias="BuildingZone" type="com.weguard.model.BuildingZone" />
+		<typeAlias alias="CompanyPower" type="com.weguard.model.CompanyPower" />
+		<typeAlias alias="Department" type="com.weguard.model.Department" />
+		<typeAlias alias="DepartmentDevice" type="com.weguard.model.DepartmentDevice" />
+		<typeAlias alias="SocketDevice" type="com.weguard.model.SocketDevice" />
+		<typeAlias alias="Manager" type="com.weguard.model.Manager" />
+		<typeAlias alias="PropertyManager" type="com.weguard.model.PropertyManager" />
+		<typeAlias alias="User" type="com.weguard.model.User" />
+		<typeAlias alias="FeedBack" type="com.weguard.model.FeedBack" />
+		<typeAlias alias="Log" type="com.weguard.model.Log" />
+		<typeAlias alias="OpenTabb" type="com.weguard.model.OpenTabb" />
+		<typeAlias alias="Visitor" type="com.weguard.model.Visitor" />
+		<typeAlias alias="ConfigValue" type="com.weguard.model.ConfigValue" />
+		<typeAlias alias="SocketObject" type="com.weguard.model.SocketObject" />
+		<typeAlias alias="UserCompany" type="com.weguard.model.UserCompany"/>
+		<typeAlias alias="UserDepart" type="com.weguard.model.UserDepart"/>
+		<typeAlias alias="VUser" type="com.weguard.model.VUser"/>
+		<typeAlias alias="AppId" type="com.weguard.model.AppId"/>
+		<typeAlias alias="BuildingZoneApp" type="com.weguard.model.BuildingZoneApp"/>
+	</typeAliases>
+	<!-- 实体接口映射资源 -->
+	<!--
+		说明：如果xxMapper.xml配置文件放在和xxMapper.java统一目录下，mappers也可以省略，因为org.mybatis.spring.mapper.MapperFactoryBean默认会去查找与xxMapper.java相同目录和名称的xxMapper.xml
+	-->
+	<!--<plugins>
+		 <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+		  <plugin interceptor="com.weguard.tool.MybatisInterceptor" />
+	</plugins>-->
+	<mappers>
+		<mapper resource="com/weguard/mapper/workCheckMapper.xml"/>
+		<mapper resource="com/weguard/mapper/companyMapper.xml" />
+		<mapper resource="com/weguard/mapper/buildingZoneMapper.xml" />
+		<mapper resource="com/weguard/mapper/companyPowerMapper.xml" />
+		<mapper resource="com/weguard/mapper/departmentMapper.xml" />
+		<mapper resource="com/weguard/mapper/departmentDeviceMapper.xml" />
+		<mapper resource="com/weguard/mapper/socketDeviceMapper.xml" />
+		<mapper resource="com/weguard/mapper/managerMapper.xml" />	
+		<mapper resource="com/weguard/mapper/propertyManagerMapper.xml" />
+		<mapper resource="com/weguard/mapper/propertyCompanyMapper.xml" />
+		<mapper resource="com/weguard/mapper/userMapper.xml" />	
+		<mapper resource="com/weguard/mapper/feedBackMapper.xml" />
+		<mapper resource="com/weguard/mapper/logMapper.xml" />
+		<mapper resource="com/weguard/mapper/openTabbMapper.xml" />
+		<mapper resource="com/weguard/mapper/visitorMapper.xml" />	
+		<mapper resource="com/weguard/mapper/configValueMapper.xml" />
+		<mapper resource="com/weguard/mapper/socketObjectMapper.xml" />
+		<mapper resource="com/weguard/mapper/userCompanyMapper.xml"/>
+		<mapper resource="com/weguard/mapper/userDepartMapper.xml"/>
+		<mapper resource="com/weguard/mapper/appIdMapper.xml"/>
+		<mapper resource="com/weguard/mapper/buildingZoneAppMapper.xml"/>
+		<mapper resource="com/weguard/mapper/menuMapper.xml"/>
+	</mappers>
+</configuration>  
